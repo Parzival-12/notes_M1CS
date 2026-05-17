@@ -1,0 +1,10 @@
+{
+  "cours": "Développement Sécurisé",
+  "promotion": "M1 CS Efrei 2024-2025",
+  "etudiants": [
+    { "nom": "Dupont",  "prenom": "Alice",  "note": 4, "sur": 20 },
+    { "nom": "Martin",  "prenom": "Bob",    "note": 6, "sur": 20 },
+    { "nom": "Bernard", "prenom": "Clara",  "note": 3, "sur": 20 },
+    { "nom": "Petit",   "prenom": "David",  "note": 7, "sur": 20 }
+  ]
+}
