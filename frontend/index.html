@@ -210,7 +210,7 @@
     ];
 
     function renderSkeleton() {
-      tbody.innerHTML = SKEL_WIDTHS.map(([w1, w2]) => `
+      const skeletonHtml = SKEL_WIDTHS.map(([w1, w2]) => `
         <tr class="skeleton-row">
           <td><div class="skel" style="width:${w1}px"></div></td>
           <td><div class="skel" style="width:${w2}px"></div></td>
@@ -218,6 +218,8 @@
           <td><div class="skel" style="width:${80 + w2}px"></div></td>
         </tr>
       `).join("");
+      tbodyLeft.innerHTML = skeletonHtml;
+      tbodyRight.innerHTML = skeletonHtml;
     }
 
     function barClass(note, sur) {
@@ -277,7 +279,8 @@
         if (!res.ok) throw new Error();
         const data = await res.json();
         if (!hasData) {
-          tbody.innerHTML = "";
+          tbodyLeft.innerHTML = "";
+          tbodyRight.innerHTML = "";
           hasData = true;
         }
         render(data.etudiants);
