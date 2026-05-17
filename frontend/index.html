@@ -290,6 +290,11 @@
       } catch {
         lastUpdate.classList.add("error");
         lastUpdate.textContent = "Erreur de chargement - nouvelle tentative…";
+        if (hasData) {
+          hasData = false;
+          prevNotes = {};
+          renderSkeleton();
+        }
       }
     }
 
